@@ -1,8 +1,9 @@
 # Election_Analysis
 Using Python to determine the Election's winner. 
-PyPoll.py has the final code of the class and the election_analysis.txt is in the analysis folder.
+PyPoll.py has the final code of the class and it is only for studying purposes. 
 
-PyPoll_Challenge.py has the challenge's code
+PyPoll_Challenge.py has the challenge's code and it should be the one to be graded.
+The election_analysis.txt is in the analysis folder.
 
 ## Project Overview
 A Colorado Board of Elections employee has given you the following tasks to complete the election audit of a recent local congressional election.
