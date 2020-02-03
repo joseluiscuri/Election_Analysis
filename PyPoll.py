@@ -40,34 +40,43 @@ with open(file_to_load) as election_data:
         candidate_votes[candidate_name]=0
         #Add a vote to candidate's count
        candidate_votes[candidate_name]+=1
-
-    
-    #Determine percentage of votes
-    for candidate in candidate_votes:
-        #Retrieve votes per candidates
-        votes = candidate_votes[candidate]
-        #Calculate percentage of votes
-        vote_percentage = int(votes)/int(total_votes) * 100
-        #print candidate name and percentage of votes
-        #print(f"{candidate}: received {vote_percentage:.2f}% of the vote")
-        if (votes > winning_count) and (vote_percentage > winning_percentage):
-            #if true, set winning_count = votes and winning_percentage = vote_percentage
-            winning_count = votes
-            winning_percentage = vote_percentage
-            #set the winning candidates name equal to candidate's name
-            winning_candidate = candidate
-        #print(f"{candidate}: has {vote_percentage:.2f}% of the votes ({votes:,} votes)\n")
-    winning_candidate_summary = (
-        f"-----------------\n"
-        f"Winner: {winning_candidate}\n"
-        f"Winning vote count: {winning_count:,} out of {total_votes:,} votes\n"
-        f"Winning percentage: {winning_percentage:.2f}%\n"
-        f"-----------------\n"
+    #Save results to txt file
+    with open(file_to_save) as txt_file:
+        election_results = (
+        f'\nElections Results\n'
+        f'-------------------\n'
+        f'Total Votes = {total_votes:,}\n'
+        f'-------------------\n'
     )
-    #print(winning_candidate_summary)
-#print number of total votes
-#print(total_votes) 
-#print the candidate list
-#print(candidate_list)
-#print the candidate vote dictionary
-#print(candidate_votes)
+        print(election_results,end="")
+        #Save final vote count to the text file.
+        txt_file.write(election_results)
+        #Determine percentage of votes
+        for candidate in candidate_votes:
+            #Retrieve votes per candidates
+            votes = candidate_votes[candidate]
+            #Calculate percentage of votes
+            vote_percentage = int(votes)/int(total_votes) * 100
+            #print candidate name and percentage of votes
+            #print(f"{candidate}: received {vote_percentage:.2f}% of the vote")
+            if (votes > winning_count) and (vote_percentage > winning_percentage):
+                #if true, set winning_count = votes and winning_percentage = vote_percentage
+                winning_count = votes
+                winning_percentage = vote_percentage
+                #set the winning candidates name equal to candidate's name
+                winning_candidate = candidate
+            #print(f"{candidate}: has {vote_percentage:.2f}% of the votes ({votes:,} votes)\n")
+        winning_candidate_summary = (
+            f"-----------------\n"
+            f"Winner: {winning_candidate}\n"
+            f"Winning vote count: {winning_count:,} out of {total_votes:,} votes\n"
+            f"Winning percentage: {winning_percentage:.2f}%\n"
+            f"-----------------\n"
+        )
+        #print(winning_candidate_summary)
+    #print number of total votes
+    #print(total_votes) 
+    #print the candidate list
+    #print(candidate_list)
+    #print the candidate vote dictionary
+    #print(candidate_votes)
