@@ -40,6 +40,8 @@ with open(file_to_load) as election_data:
         candidate_votes[candidate_name]=0
         #Add a vote to candidate's count
        candidate_votes[candidate_name]+=1
+
+    
     #Determine percentage of votes
     for candidate in candidate_votes:
         #Retrieve votes per candidates
@@ -54,7 +56,7 @@ with open(file_to_load) as election_data:
             winning_percentage = vote_percentage
             #set the winning candidates name equal to candidate's name
             winning_candidate = candidate
-        print(f"{candidate}: has {vote_percentage:.2f}% of the votes ({votes:,} votes)\n")
+        #print(f"{candidate}: has {vote_percentage:.2f}% of the votes ({votes:,} votes)\n")
     winning_candidate_summary = (
         f"-----------------\n"
         f"Winner: {winning_candidate}\n"
@@ -62,7 +64,7 @@ with open(file_to_load) as election_data:
         f"Winning percentage: {winning_percentage:.2f}%\n"
         f"-----------------\n"
     )
-    print(winning_candidate_summary)
+    #print(winning_candidate_summary)
 #print number of total votes
 #print(total_votes) 
 #print the candidate list
