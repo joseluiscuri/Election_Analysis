@@ -48,7 +48,7 @@ with open(file_to_load) as election_data:
         vote_percentage = int(votes)/int(total_votes) * 100
         #print candidate name and percentage of votes
         #print(f"{candidate}: received {vote_percentage:.2f}% of the vote")
-        if (votes > winning_count) and (winning_percentage > vote_percentage):
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
             #if true, set winning_count = votes and winning_percentage = vote_percentage
             winning_count = votes
             winning_percentage = vote_percentage
@@ -58,8 +58,8 @@ with open(file_to_load) as election_data:
     winning_candidate_summary = (
         f"-----------------\n"
         f"Winner: {winning_candidate}\n"
-        f"Winning vote count: {winning_count:,}\n"
-        f"Winning percentage: {winning_percentage:.2f}\n"
+        f"Winning vote count: {winning_count:,} out of {total_votes:,} votes\n"
+        f"Winning percentage: {winning_percentage:.2f}%\n"
         f"-----------------\n"
     )
     print(winning_candidate_summary)
