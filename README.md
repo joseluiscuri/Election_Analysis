@@ -38,9 +38,9 @@ After sharing the election audit with the election commission, the employee is a
 ## Challenge Summary
 The analysis of the election shows that:
 - The number of voters per county were:
-    - Jefferson: had 10.51% of the votes (38,855 votes)
-    - Denver: had 82.78% of the votes (306,055 votes)
-    - Arapahoe: had 6.71% of the votes (24,801 votes)
+    - Jefferson: with 10.51% of the votes (38,855 votes)
+    - Denver: with 82.78% of the votes (306,055 votes)
+    - Arapahoe: with 6.71% of the votes (24,801 votes)
 - The counnty with the largest turnout was:
-    - Denver, who had 82.78% of the total voting turnout (306,055 out of 369,711)
+    - Denver, with 82.78% of the total voting turnout (306,055 out of 369,711)
 
